@@ -1,7 +1,7 @@
 {
   "id": "apex_dash",
   "title": "Apex Dash",
-  "description": "Instrument cluster dashes: Apex and Circuit (new), plus M and Sport, with shift lights, boost, temps and shift scoring. Keeps clear of the places BMW paints over the cluster.",
+  "description": "Instrument cluster dashes with race-car looks: GT3, Apex, Apex Red, Circuit, Sprint, M and Sport. Shift lights, rev bar, boost, temps and shift scoring, clear of the places BMW paints over the cluster.",
   "version": "1.0.0",
   "vendor": "custom",
   "loggingId": "OAD1",
@@ -91,19 +91,31 @@
       "key": "hudLayout",
       "label": "Theme (when not by drive mode)",
       "type": "choice",
-      "default": "apex",
+      "default": "gt3",
       "options": [
         [
           "off",
           "Off (BMW's own cluster)"
         ],
         [
+          "gt3",
+          "GT3"
+        ],
+        [
           "apex",
           "Apex"
         ],
         [
+          "apex_red",
+          "Apex Red"
+        ],
+        [
           "circuit",
           "Circuit"
+        ],
+        [
+          "sprint",
+          "Sprint"
         ],
         [
           "m",
@@ -136,12 +148,24 @@
           "Off (BMW's own cluster)"
         ],
         [
+          "gt3",
+          "GT3"
+        ],
+        [
           "apex",
           "Apex"
         ],
         [
+          "apex_red",
+          "Apex Red"
+        ],
+        [
           "circuit",
           "Circuit"
+        ],
+        [
+          "sprint",
+          "Sprint"
         ],
         [
           "m",
@@ -157,19 +181,31 @@
       "key": "inSport",
       "label": "In Sport",
       "type": "choice",
-      "default": "apex",
+      "default": "gt3",
       "options": [
         [
           "off",
           "Off (BMW's own cluster)"
         ],
         [
+          "gt3",
+          "GT3"
+        ],
+        [
           "apex",
           "Apex"
         ],
         [
+          "apex_red",
+          "Apex Red"
+        ],
+        [
           "circuit",
           "Circuit"
+        ],
+        [
+          "sprint",
+          "Sprint"
         ],
         [
           "m",
@@ -192,12 +228,24 @@
           "Off (BMW's own cluster)"
         ],
         [
+          "gt3",
+          "GT3"
+        ],
+        [
           "apex",
           "Apex"
         ],
         [
+          "apex_red",
+          "Apex Red"
+        ],
+        [
           "circuit",
           "Circuit"
+        ],
+        [
+          "sprint",
+          "Sprint"
         ],
         [
           "m",
@@ -244,6 +292,66 @@
         [
           "24h",
           "24-hour"
+        ]
+      ]
+    },
+    {
+      "key": "utcOffset",
+      "label": "Clock time zone",
+      "type": "choice",
+      "default": "180",
+      "options": [
+        [
+          "auto",
+          "Unit clock (as it is)"
+        ],
+        [
+          "0",
+          "UTC"
+        ],
+        [
+          "60",
+          "UTC+1"
+        ],
+        [
+          "120",
+          "UTC+2"
+        ],
+        [
+          "180",
+          "UTC+3 (Iraq, Saudi, Kuwait, Turkey)"
+        ],
+        [
+          "210",
+          "UTC+3:30 (Iran)"
+        ],
+        [
+          "240",
+          "UTC+4 (UAE, Oman)"
+        ],
+        [
+          "270",
+          "UTC+4:30"
+        ],
+        [
+          "300",
+          "UTC+5"
+        ],
+        [
+          "-300",
+          "UTC-5 (US Eastern)"
+        ],
+        [
+          "-360",
+          "UTC-6"
+        ],
+        [
+          "-420",
+          "UTC-7"
+        ],
+        [
+          "-480",
+          "UTC-8"
         ]
       ]
     },

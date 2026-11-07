@@ -57,6 +57,15 @@ const THEMES = {
         bg: [0, 0, 0, 255], panel: [0, 0, 0, 255], line: [46, 128, 176, 255], head: [226, 228, 232, 255],
         ink: [12, 12, 14, 255], accent: [64, 196, 255, 255], well: [0, 0, 0, 255], wellLine: [60, 70, 84, 255],
     },
+    apexred: {
+        name: 'Apex Red',
+        fg: [244, 244, 246, 255], dim: [150, 150, 160, 255], track: [255, 255, 255, 30], arc: [255, 40, 40, 255],
+        glow: 0, stripe: true,
+        bar: { low: [60, 220, 120], mid: [255, 196, 0], high: [255, 30, 30], midAt: 'shift' },
+        rev: { from: [255, 40, 40], to: [255, 40, 40] },
+        bg: [0, 0, 0, 255], panel: [0, 0, 0, 255], line: [150, 40, 40, 255], head: [226, 228, 232, 255],
+        ink: [12, 12, 14, 255], accent: [255, 196, 0, 255], well: [0, 0, 0, 255], wellLine: [70, 60, 60, 255],
+    },
     circuit: {
         name: 'Circuit',
         fg: [244, 247, 244, 255], dim: [140, 158, 140, 255], track: [255, 255, 255, 28], arc: [150, 235, 40, 255],
@@ -65,6 +74,15 @@ const THEMES = {
         rev: { from: [150, 235, 40], to: [150, 235, 40] },
         bg: [0, 0, 0, 255], panel: [0, 0, 0, 255], line: [86, 130, 40, 255], head: [226, 228, 232, 255],
         ink: [12, 12, 14, 255], accent: [150, 235, 40, 255], well: [0, 0, 0, 255], wellLine: [60, 70, 60, 255],
+    },
+    sprint: {
+        name: 'Sprint',
+        fg: [250, 248, 240, 255], dim: [168, 150, 120, 255], track: [255, 255, 255, 30], arc: [255, 168, 0, 255],
+        glow: 0, stripe: false,
+        bar: { low: [255, 168, 0], mid: [255, 120, 0], high: [255, 42, 42], midAt: 'shift' },
+        rev: { from: [255, 168, 0], to: [255, 42, 42] },
+        bg: [0, 0, 0, 255], panel: [0, 0, 0, 255], line: [150, 100, 20, 255], head: [226, 228, 232, 255],
+        ink: [12, 12, 14, 255], accent: [255, 168, 0, 255], well: [0, 0, 0, 255], wellLine: [70, 62, 48, 255],
     },
     // Sport (layout sport.json): BMW's Live Cockpit Sport view, blue speed and red revs round the map.
     // Extra roles: sblue / spink (the speed and rpm scale numbers), sred (the rpm caption).
