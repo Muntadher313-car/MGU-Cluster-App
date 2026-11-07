@@ -816,6 +816,10 @@ class HudApp {
                 if (!sp.oilCold) return '';
                 return sp.cold ? 'COLD · LIMIT ' + sp.rpm : 'OIL COLD · GO EASY';
             }
+            case 'fuelPct': {        // tank level in %, '--' until the car has said
+                const f = this._raw('fuel');
+                return isNum(f) ? String(Math.round(f * 100)) : '--';
+            }
             case 'gearnum': {
                 const d = this.car.data();
                 if (d.stage === 'P' || d.stage === 'R' || d.stage === 'N') return d.stage;
@@ -1256,6 +1260,10 @@ class HudApp {
             let role = w.color || 'fg';
             if (w.colorBy === 'verdict' && this.score.last) role = VERDICT[this.score.last.verdict] || role;
             if (w.near && this._nearMark(w.near[0]) === w.near[1]) role = w.nearColor || 'fg';
+            if (w.warn) {            // e.g. {"signal": "coolant", "above": 112} or {"signal": "fuel", "below": 0.15}: shift red past the limit
+                const v = this._raw(w.warn.signal);
+                if (isNum(v) && ((isNum(w.warn.above) && v > w.warn.above) || (isNum(w.warn.below) && v < w.warn.below))) role = 'hot';
+            }
             if (w.hotWhen || w.coldWhen) {
                 const sp = this._shift();
                 if (w.coldWhen && sp[w.coldWhen]) role = VERDICT.COLD;

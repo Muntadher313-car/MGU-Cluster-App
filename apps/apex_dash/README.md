@@ -11,7 +11,12 @@ Redraws the instrument cluster through cluster-render. Seven dashes:
 | **Sprint** | Speed big on the left, gear big on the right, slanted rev bar and rpm up top |
 | **M**, **Sport** | The two other dashes from Cluster Themes, unchanged (not yet tried on a car, per that app's notes) |
 
-Shift lights, shift scoring, cold-engine rev guard and the drive-mode switching work as in Cluster Themes.
+Shift lights, shift scoring and the cold-engine rev guard work as in Cluster Themes. New in 1.2:
+
+- **Fuel %** replaces the boost readout in every dash (the tank size is `tankLitres` in app.json, 68 for a G30).
+- **Warning colours:** oil past 125 °C, water past 112 °C and fuel under 15 % turn red. Any text item can do this with `"warn": {"signal": "coolant", "above": 112}`.
+- **SHIFT** flashes red either side of the shift lights at the shift point, and the drive mode (COMFORT, SPORT ...) is written above the left side.
+- **By drive mode** is on by default: Comfort uses Apex, Sport uses Sprint, Eco Pro uses Circuit. Change it in the settings.
 
 ## Clock
 

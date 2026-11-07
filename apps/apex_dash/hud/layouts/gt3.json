@@ -70,8 +70,7 @@
           "h": 210,
           "head": 36,
           "radius": 4,
-          "headColor": "accent",
-          "toggle": "showBoost"
+          "headColor": "accent"
         },
         {
           "id": "shift_box",
@@ -351,10 +350,9 @@
       "y": 215,
       "w": 250,
       "h": 27,
-      "text": "BOOST {{u:boost}}",
+      "text": "FUEL",
       "font": "head",
-      "color": "ink",
-      "toggle": "showBoost"
+      "color": "ink"
     },
     {
       "id": "boost",
@@ -364,10 +362,13 @@
       "y": 268,
       "w": 206,
       "h": 93,
-      "text": "{{boost}}",
+      "text": "{{fuelPct}}",
       "font": "big",
       "align": "right",
-      "toggle": "showBoost"
+      "warn": {
+        "signal": "fuel",
+        "below": 0.15
+      }
     },
     {
       "id": "boost_unit",
@@ -377,10 +378,9 @@
       "y": 322,
       "w": 60,
       "h": 37,
-      "text": "{{u:boost}}",
+      "text": "%",
       "font": "unit",
-      "color": "dim",
-      "toggle": "showBoost"
+      "color": "dim"
     },
     {
       "id": "shift_head",
@@ -533,7 +533,11 @@
       "h": 45,
       "text": "{{coolant}}°",
       "font": "small",
-      "toggle": "!mapWindow"
+      "toggle": "!mapWindow",
+      "warn": {
+        "signal": "coolant",
+        "above": 112
+      }
     },
     {
       "id": "oil_label",
@@ -560,7 +564,11 @@
       "text": "{{oil}}°",
       "font": "small",
       "align": "right",
-      "toggle": "!mapWindow"
+      "toggle": "!mapWindow",
+      "warn": {
+        "signal": "oil",
+        "above": 125
+      }
     }
   ]
 }

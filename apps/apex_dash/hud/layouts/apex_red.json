@@ -40,13 +40,12 @@
      "radius": 18
     },
     {
-     "id": "boost_box",
+     "id": "fuel_box",
      "x": 1610,
      "y": 215,
      "w": 280,
      "h": 140,
-     "radius": 18,
-     "toggle": "showBoost"
+     "radius": 18
     },
     {
      "id": "shift_box",
@@ -200,7 +199,11 @@
    "text": "{{oil}}",
    "font": "big",
    "color": "fg",
-   "align": "right"
+   "align": "right",
+   "warn": {
+    "signal": "oil",
+    "above": 125
+   }
   },
   {
    "id": "oil_unit",
@@ -237,7 +240,11 @@
    "text": "{{coolant}}",
    "font": "big",
    "color": "fg",
-   "align": "right"
+   "align": "right",
+   "warn": {
+    "signal": "coolant",
+    "above": 112
+   }
   },
   {
    "id": "water_unit",
@@ -252,31 +259,45 @@
    "color": "dim"
   },
   {
-   "id": "boost_head",
+   "id": "fuel_head",
    "type": "text",
    "z": 5,
    "x": 1628,
    "y": 225,
    "w": 250,
    "h": 27,
-   "text": "BOOST {{u:boost}}",
+   "text": "FUEL",
    "font": "head",
-   "color": "dim",
-   "toggle": "showBoost"
+   "color": "dim"
   },
   {
-   "id": "boost",
+   "id": "fuel",
    "type": "text",
    "z": 5,
    "x": 1620,
    "y": 259,
-   "w": 256,
+   "w": 190,
    "h": 93,
-   "text": "{{boost}}",
+   "text": "{{fuelPct}}",
    "font": "big",
    "color": "fg",
-   "align": "left",
-   "toggle": "showBoost"
+   "align": "right",
+   "warn": {
+    "signal": "fuel",
+    "below": 0.15
+   }
+  },
+  {
+   "id": "fuel_unit",
+   "type": "text",
+   "z": 5,
+   "x": 1816,
+   "y": 303,
+   "w": 64,
+   "h": 37,
+   "text": "%",
+   "font": "unit",
+   "color": "dim"
   },
   {
    "id": "shift_head",
@@ -339,6 +360,43 @@
    "text": "{{ampm}}",
    "font": "unit",
    "color": "dim"
+  },
+  {
+   "id": "prompt_l",
+   "type": "text",
+   "z": 5,
+   "x": 352,
+   "y": 60,
+   "w": 110,
+   "h": 37,
+   "text": "{{shiftPrompt}}",
+   "font": "unit",
+   "color": "hot",
+   "align": "right"
+  },
+  {
+   "id": "prompt_r",
+   "type": "text",
+   "z": 5,
+   "x": 1462,
+   "y": 60,
+   "w": 100,
+   "h": 37,
+   "text": "{{shiftPrompt}}",
+   "font": "unit",
+   "color": "hot"
+  },
+  {
+   "id": "mode",
+   "type": "text",
+   "z": 5,
+   "x": 138,
+   "y": 178,
+   "w": 260,
+   "h": 27,
+   "text": "{{mode}}",
+   "font": "head",
+   "color": "accent"
   },
   {
    "id": "last_head",

@@ -2,7 +2,7 @@
   "id": "apex_dash",
   "title": "Apex Dash",
   "description": "Instrument cluster dashes with race-car looks: GT3, Apex, Apex Red, Circuit, Sprint, M and Sport. Shift lights, rev bar, boost, temps and shift scoring, clear of the places BMW paints over the cluster.",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "vendor": "custom",
   "loggingId": "OAD1",
   "iconGlyph": "APX",
@@ -141,7 +141,7 @@
       "key": "inComfort",
       "label": "In Comfort",
       "type": "choice",
-      "default": "off",
+      "default": "apex",
       "options": [
         [
           "off",
@@ -181,7 +181,7 @@
       "key": "inSport",
       "label": "In Sport",
       "type": "choice",
-      "default": "gt3",
+      "default": "sprint",
       "options": [
         [
           "off",
@@ -221,7 +221,7 @@
       "key": "inEco",
       "label": "In Eco Pro",
       "type": "choice",
-      "default": "off",
+      "default": "circuit",
       "options": [
         [
           "off",
@@ -393,7 +393,7 @@
     },
     {
       "key": "showBoost",
-      "label": "Show boost",
+      "label": "Show boost (M, Sport)",
       "type": "bool",
       "default": true
     },
@@ -496,7 +496,7 @@
         }
       ]
     },
-    "tankLitres": 65,
+    "tankLitres": 68,
     "engine": {
       "torqueNm": 500,
       "powerKw": 285

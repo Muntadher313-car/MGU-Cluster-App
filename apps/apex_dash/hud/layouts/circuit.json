@@ -32,13 +32,12 @@
      "radius": 16
     },
     {
-     "id": "boost_box",
+     "id": "fuel_box",
      "x": 1110,
      "y": 440,
      "w": 250,
      "h": 104,
-     "radius": 16,
-     "toggle": "showBoost"
+     "radius": 16
     }
    ]
   },
@@ -55,6 +54,44 @@
    "round": true,
    "off": 0.12,
    "from": 3000
+  },
+  {
+   "id": "prompt_l",
+   "type": "text",
+   "z": 5,
+   "x": 352,
+   "y": 60,
+   "w": 110,
+   "h": 37,
+   "text": "{{shiftPrompt}}",
+   "font": "unit",
+   "color": "hot",
+   "align": "right"
+  },
+  {
+   "id": "prompt_r",
+   "type": "text",
+   "z": 5,
+   "x": 1462,
+   "y": 60,
+   "w": 100,
+   "h": 37,
+   "text": "{{shiftPrompt}}",
+   "font": "unit",
+   "color": "hot"
+  },
+  {
+   "id": "mode",
+   "type": "text",
+   "z": 5,
+   "x": 140,
+   "y": 222,
+   "w": 260,
+   "h": 27,
+   "text": "{{mode}}",
+   "font": "head",
+   "color": "accent",
+   "align": "center"
   },
   {
    "id": "ring_rpm",
@@ -211,7 +248,11 @@
    "h": 27,
    "text": "OIL",
    "font": "head",
-   "color": "dim"
+   "color": "dim",
+   "warn": {
+    "signal": "oil",
+    "above": 125
+   }
   },
   {
    "id": "oil",
@@ -224,7 +265,11 @@
    "text": "{{oil}}",
    "font": "small",
    "color": "fg",
-   "align": "right"
+   "align": "right",
+   "warn": {
+    "signal": "oil",
+    "above": 125
+   }
   },
   {
    "id": "oil_unit",
@@ -236,7 +281,11 @@
    "h": 37,
    "text": "{{u:temp}}",
    "font": "unit",
-   "color": "dim"
+   "color": "dim",
+   "warn": {
+    "signal": "oil",
+    "above": 125
+   }
   },
   {
    "id": "water_head",
@@ -248,7 +297,11 @@
    "h": 27,
    "text": "WATER",
    "font": "head",
-   "color": "dim"
+   "color": "dim",
+   "warn": {
+    "signal": "coolant",
+    "above": 112
+   }
   },
   {
    "id": "water",
@@ -261,7 +314,11 @@
    "text": "{{coolant}}",
    "font": "small",
    "color": "fg",
-   "align": "right"
+   "align": "right",
+   "warn": {
+    "signal": "coolant",
+    "above": 112
+   }
   },
   {
    "id": "water_unit",
@@ -273,34 +330,60 @@
    "h": 37,
    "text": "{{u:temp}}",
    "font": "unit",
-   "color": "dim"
+   "color": "dim",
+   "warn": {
+    "signal": "coolant",
+    "above": 112
+   }
   },
   {
-   "id": "boost_head",
+   "id": "fuel_head",
    "type": "text",
    "z": 5,
    "x": 1126,
    "y": 452,
    "w": 220,
    "h": 27,
-   "text": "BOOST {{u:boost}}",
+   "text": "FUEL",
    "font": "head",
    "color": "dim",
-   "toggle": "showBoost"
+   "warn": {
+    "signal": "fuel",
+    "below": 0.15
+   }
   },
   {
-   "id": "boost",
+   "id": "fuel",
    "type": "text",
    "z": 5,
    "x": 1120,
    "y": 484,
-   "w": 226,
+   "w": 150,
    "h": 45,
-   "text": "{{boost}}",
+   "text": "{{fuelPct}}",
    "font": "small",
    "color": "fg",
-   "align": "left",
-   "toggle": "showBoost"
+   "align": "right",
+   "warn": {
+    "signal": "fuel",
+    "below": 0.15
+   }
+  },
+  {
+   "id": "fuel_unit",
+   "type": "text",
+   "z": 5,
+   "x": 1278,
+   "y": 488,
+   "w": 70,
+   "h": 37,
+   "text": "%",
+   "font": "unit",
+   "color": "dim",
+   "warn": {
+    "signal": "fuel",
+    "below": 0.15
+   }
   },
   {
    "id": "last_head",
