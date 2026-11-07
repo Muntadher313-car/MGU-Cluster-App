@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1 align="center">bimmer-lab apps</h1>
 
 <p align="center">Apps for BMW iDrive 7 head units (MGU), installed through the community MGU Store.</p>
@@ -49,7 +48,3 @@ The Store builds each app on the car from this repo. No BMW code is in it. Both 
 ## Licence
 
 MIT. Third-party parts are listed in each app's `NOTICE`. To work on the apps, see [docs/DEVELOPING.md](docs/DEVELOPING.md).
-=======
-# MGU-Cluster-App
-MGU-Cluster-App
->>>>>>> 676bc5d14ae85fc75ef230d8195afe8080e0f0d5
